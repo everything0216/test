@@ -12,24 +12,20 @@
         padding-left: 0px;
     }
 
-    .btn-group{
-        width: 100%;
-    }
-
-    .btn-group > button{
-        float: left;
-        height: 100%;
-        font-size: 5px;
-    }
+  .btn-group > button{
+    min-width:20vw;
+  }
 
     .header-nav{
-        min-width: 65vw;
-        font-size: smaller;
+        height: 60%;
+        
+        font-size: 10px;
     }
 
     .header-content{
         min-width: 100vw;
         justify-content: flex-start;
+        padding-right: 0vw;
     }
     
     .bg img {
