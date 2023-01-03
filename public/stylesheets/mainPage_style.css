@@ -18,9 +18,9 @@
 
     .btn-group > button{
         float: left;
-        width: 20%;
+        max-width: 55vw;
         height: 100%;
-        font-size: 1px;
+        
     }
 
     .header-nav{
@@ -36,6 +36,10 @@
     .bg img {
         background-position: center center;
         width: 100%;
+    }
+
+    .dropdown-toggle{
+        width:15vw;
     }
     
 }
