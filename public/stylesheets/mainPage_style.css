@@ -10,17 +10,10 @@
     .logo{
         font-size: 4vw;
         padding-left: 0px;
+        justify-content: flex-start;
     }
 
-  .btn-group > button{
-    min-width:20vw;
-  }
-
-    .header-nav{
-        height: 60%;
-        
-        font-size: 10px;
-    }
+  
 
     .header-content{
         min-width: 100vw;
@@ -33,9 +26,7 @@
         width: 100%;
     }
 
-    .dropdown-toggle{
-        min-width:20vw;
-    }
+    
     
 }
 
