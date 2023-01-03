@@ -19,7 +19,7 @@
     .btn-group > button{
         float: left;
         height: 100%;
-        font-size: smaller;
+        font-size: 5px;
     }
 
     .header-nav{
