@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap');
+
+
+@media (max-width:569px) {
+    .card{
+        max-width:90%;
+        height:auto;
+        margin: 10px;
+    }
+    .logo{
+        font-size: 4vw;
+        padding-left: 0px;
+    }
+
+    .btn-group{
+        width: 100%;
+    }
+
+    .btn-group > button{
+        float: left;
+        max-width: 55vw;
+        height: 100%;
+        font-size: 10px;
+    }
+
+    .header-nav{
+        width: 45vw;
+    
+    }
+
+    .header-content{
+        min-width: 100vw;
+        justify-content: flex-start;
+    }
+    
+    .bg img {
+        background-position: center center;
+        width: 100%;
+    }
+
+    .dropdown-toggle{
+        width:15vw;
+    }
+    
+}
+
+body{
+    background-image: url("../images/background2.png");
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Noto Serif TC', serif;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.link:hover{
+    color: rgb(229, 136, 14);
+    cursor: pointer;
+}
+/*
+header{
+    height: 100px;
+    width: 100vw;
+    background-color: white; 
+    z-index: 1;
+}
+*/
+.header-content{
+    min-width: 100vw;
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 30px;
+    display: flex;
+    /*將空白空間分配在東西之間*/
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(190, 241, 202);
+    margin: 10px;
+}
+
+.logo{
+    text-align: center;
+    align-items: center;
+    justify-content:left;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 6px;
+}
+
+.header-nav{
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.pair{
+    min-width: 60vw;
+    padding-top: 20px;
+}
+
+.container{
+    /*background-color: bisque;*/
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.change_info{
+    display:flex;
+    /*系統預設row(水平)*/
+    flex-direction:column;
+    margin-bottom:10px;
+    /*設置網格行與列之間的間隙*/
+    gap: 5px;
+    text-align: left;
+}
+
+.change_time{
+    padding-right: 10px;
+    padding-top: 10px;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.change_location{
+    padding-right: 10px;
+    padding-top: 10px;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.pair > .container{
+    min-height: 80vh;
+}
+
+.reLoad{
+    float: right;
+    padding-right:5%;
+}
+
+.card{
+    width: 25rem;
+    margin-bottom:10px;
+}
+
+
+
+button:hover{
+    cursor: pointer;
+}
