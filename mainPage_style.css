@@ -20,7 +20,7 @@
         float: left;
         max-width: 55vw;
         height: 100%;
-        font-size: 10px;
+        font-size: 1px;
     }
 
     .header-nav{
@@ -80,7 +80,7 @@ header{
     min-width: 100vw;
     height: 70px;
     padding-left: 20px;
-    padding-right: 30px;
+    padding-right: 5vw;
     display: flex;
     /*將空白空間分配在東西之間*/
     justify-content: space-between;
@@ -101,9 +101,8 @@ header{
 .header-nav{
     min-width: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
-
 
 .pair{
     min-width: 60vw;
