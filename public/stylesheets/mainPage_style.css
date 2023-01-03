@@ -18,14 +18,13 @@
 
     .btn-group > button{
         float: left;
-        max-width: 55vw;
         height: 100%;
-        
+        font-size: smaller;
     }
 
     .header-nav{
-        width: 45vw;
-    
+        
+        font-size: smaller;
     }
 
     .header-content{
@@ -99,9 +98,9 @@ header{
 }
 
 .header-nav{
-    min-width: 200px;
+    min-width: 215px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .pair{
