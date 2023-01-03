@@ -23,7 +23,7 @@
     }
 
     .header-nav{
-        
+        min-width: 65vw;
         font-size: smaller;
     }
 
@@ -38,7 +38,7 @@
     }
 
     .dropdown-toggle{
-        width:15vw;
+        min-width:20vw;
     }
     
 }
