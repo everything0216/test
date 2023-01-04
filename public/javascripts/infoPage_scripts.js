@@ -62,7 +62,7 @@ fileUploader.addEventListener('change', (event) => {
     console.log( $('input[name="fileUpload"]').get(0).files[0]);
     $.ajax({
         type: "POST",
-        url: 'http://127.0.0.1:3000/uploadPhoto',
+        url: '/uploadPhoto',
         data: formData,
         processData : false, 
         contentType : false,
@@ -72,3 +72,23 @@ fileUploader.addEventListener('change', (event) => {
         }
     });
   });
+
+
+  $("#idForm").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    
+    $.ajax({
+        type: "POST",
+        url: '/ownerInfo',
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+          alert(data); // show response from the php script.
+        }
+    });
+    
+});
