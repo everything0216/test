@@ -150,6 +150,7 @@ module.exports = class member{
             else {
                 insertNewData(registerData, 'basicCollection');
                 LOCAL_INFO.account = req.body.account;
+                console.log(req.body.account );
                 updateLocalInfo(registerData);
                 res.json({
                     result: "register succ"
