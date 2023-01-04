@@ -4,9 +4,10 @@
   	<script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
     <script src="./javascripts/mainPage_scripts.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +21,7 @@
             <h1 class="logo">海大共乘系統</h1>
             <nav class="header-nav">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-outline-success dropdown-toggle btn-sm" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <button type="button" class="btn btn-outline-success dropdown-toggle btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
                         修改資料
                     </button>
                     <ul class="dropdown-menu">
@@ -40,7 +41,7 @@
                         </div>
                         <div class="modal-body">
                           <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-                          <form method="post" action="/changeOwnerBasic" target="dummyframe">
+                          <form  action="" target="dummyframe" id="ownerBasicForm">
                             <div class="change_info">
                               <label for="name">姓名:</label>
                               <input type="text" name="name" id="name">
@@ -89,7 +90,7 @@
                         </div>
                         <div class="modal-body">
                           <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-                          <form method="post" action="/changeOwnerTime" target="dummyframe">
+                          <form  action="" target="dummyframe" id="ownerTimeForm">
                             <h3>請選擇可接送的時段</h3>
                               <div class="change_time">
                                 <p><input type="checkbox" value="00:00-01:00" name="workingTime">00:00-01:00
@@ -137,7 +138,7 @@
                         </div>
                         <div class="modal-body">
                           <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-                          <form method="post" action="/changeOwnerLoc" target="dummyframe">
+                          <form  action="" target="dummyframe" id="ownerLocForm">
                             <h4 class="location-title">可接受接送的區域</h4>
                               <div class="change_location">
                                 <p><input type="checkbox" value="中正區" name="area" id="Zhongzheng" style="vertical-align:middle;">中正區<br></p>
@@ -166,15 +167,15 @@
                         </div>
                         <div class="modal-body">
                           <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-                          <form >
+                          <!-- <form > -->
                             <div class="mb-3">
                               <label for="formFileMultiple" class="form-label">放上你的機車照吧!</label>
-                              <input class="form-control" type="file" id="fileUpload" name="fileUpload" accept="image/*" multiple="multiple"/> 
+                              <input class="form-control" type="file" id="fileUpload" name="fileUpload" accept=".png, .jpg, .jpeg, image/*" multiple="multiple"/> 
                             </div>
                             <div class="modal-footer">
-                              <button  type="button" class="btn btn-outline-success" data-bs-dismiss="modal" onClick="uploadPicture()">確認</button>
+                              <button id="btn_uploadPicture" class="btn btn-outline-success" data-bs-dismiss="modal" onClick="uploadPicture();">確認</button>
                             </div>
-                          </form>
+                          <!-- </form> -->
                         </div>
                       </div>
                     </div>
@@ -207,13 +208,8 @@
         </div>
     </header>
     <div class="reLoad">
-		<!-- <form method="post" action="http://127.0.0.1:3000/listPassenger">
-			<button type="submit" class="btn btn-outline-success" onclick="btn1()">
-				重整頁面
-			</button>
-		</form>  -->
       
-		<button type="button" class="btn btn-outline-success btn-sm" onClick="window.location.reload();">
+		<button class="btn btn-outline-success btn-sm" onClick="window.location.reload();">
 			重整
 		</button>
     </div>
