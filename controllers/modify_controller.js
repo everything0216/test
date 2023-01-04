@@ -327,6 +327,7 @@ module.exports = class member{
             else if(LOCAL_INFO.identity == "passenger") {
                 updateLocalPData(changePassengerData);
                 inputDataByAcc(LOCAL_P_DATA, 'passengerCollection').then(() => {
+                    console.log(req);
                     console.log("[succ] change passenger data 成功");
                 });
             }
