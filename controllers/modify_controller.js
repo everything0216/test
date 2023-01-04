@@ -319,7 +319,7 @@ module.exports = class member{
                 updateLocalOData(changeOwnerData);
                 inputDataByAcc(LOCAL_O_DATA, 'ownerCollection').then(() => {
                     console.log("[succ] change owner data 成功");
-                    console.log(req);
+                    console.log(req.body);
                     console.log(req.body.gender);
                 });
             }
