@@ -4,11 +4,24 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var bodyParser = require('body-parser');
+var multer = require('multer');
+var upload = multer();
+
 var memberRouter = require('./routes/member');
 var usersRouter = require('./routes/users');
 
 var app = express();
 const cors = require('cors');
+
+
+app.use(bodyParser.json());
+// for parsing x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+//form-urlencoded
+// for parsing multipart/form-data
+app.use(upload.array());
+
 
 app.use(cors());
 // view engine setup
