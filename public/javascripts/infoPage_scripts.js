@@ -62,7 +62,7 @@ fileUploader.addEventListener('change', (event) => {
     console.log( $('input[name="fileUpload"]').get(0).files[0]);
     $.ajax({
         type: "POST",
-        url: '/uploadPhoto',
+        url: 'http://127.0.0.1:3000/uploadPhoto',
         data: formData,
         processData : false, 
         contentType : false,
@@ -73,8 +73,8 @@ fileUploader.addEventListener('change', (event) => {
     });
   });
 
-
-  $("#idForm").submit(function(e) {
+  
+  $("#ownerForm").submit(function(e) {
 
     e.preventDefault(); // avoid to execute the actual submit of the form.
 
@@ -83,7 +83,7 @@ fileUploader.addEventListener('change', (event) => {
     
     $.ajax({
         type: "POST",
-        url: '/ownerInfo',
+        url: "/ownerInfo",
         data: form.serialize(), // serializes the form's elements.
         success: function(data)
         {
